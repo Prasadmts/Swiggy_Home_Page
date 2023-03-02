@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+/*----------------------- nav-bar items -----------------------*/
+.nav-container{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 200;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+}
+.nav-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left > div{
+    padding: 8px;
+}
+
+.nav-right{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav-icons{
+    padding: 5px;
+}
+
+.menubar{
+    visibility: hidden;
+}
+
+
+
+/* --------------items-bar 2 items------------------------ */
+
+.min-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid grey;
+}
+
+.filter-items > span{
+    padding-left: 50px ;
+}
+
+/* ------------------- card container ------------------------ */
+.root-card{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
+    margin-top: 30px;
+}
+.container{
+    width: 80vw;
+    margin: 70px auto;
+    margin-bottom: 70px;
+
+}
+.card{
+    position: relative;
+    width: 250px;
+    font-size: 14px;
+    padding: 20px 20px 10px 20px;
+    color: #686b78;
+    display: flex;
+    flex-flow: column wrap;
+}
+.card > img{
+    width: 250px;
+}
+.card > h3 {
+    padding: 5px 0;
+    color: black;
+}
+.rating-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 0;
+    border-bottom: 0.2px solid #ece6e6;
+}
+.rating-container > .third-card {
+    background-color: green;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    background: #db7c38;
+    color: white;
+    font-size: 14px;
+    padding: 2px 6px;
+    gap: 5px;
+}
+.rating > .material-icons {
+    font-size: 14px !important;
+}
+.bullet{
+    width: 4px;
+    height: 4px;
+    background-color: #686b78;
+    border-radius: 50%;
+}
+.discount {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #8a584b;
+    gap: 10px;
+}
+.discount > .material-icons {
+    font-size: 20px;
+}
+
+.btn {
+    width: 100%;
+    margin: auto;
+    border: none;
+    background: none;
+    font-weight: bold !important;
+    color: white;
+    padding: 10px 0 0 0;
+    color: #5d8ed5;
+    border-top: 0.2px solid #ece6e6;
+    visibility: hidden;
+}
+
+.card:hover .btn{
+    visibility: visible;
+}
+.card:hover{
+    outline: 1px solid grey;
+    box-shadow: 3px 3px 5px;
+}
+.badge {
+    position: absolute;
+    background: rgb(58, 60, 65);
+    color: white;
+    top: 20px;
+    left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 9px 4px;
+    max-width: 50%;
+}
+
+
+.foot-bar{
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 100px;
+}
+.foot > div {
+    line-height: 3em;
+}
+li {
+    list-style-type: none;
+}
+li > h3 {
+    color: #808080;
+}
+li a {
+    color: white;
+    text-decoration: none;
+}
+.foot > div {
+    line-height: 3em;
+}
+.img1{
+    width: 200px;
+    margin-top: 30px;
+    transition-duration: 0.5sec;
+    border: 2px solid grey;
+}
+
+.list4 > a > img{
+    width: 200px;
+    margin-top: 30px;
+}
+
+.foot-bar > div{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+.foot-bar img:hover{
+    width: 210px;
+}
+
+@media (max-width:950px){
+    .menubar{
+        display: flex;
+        align-items: center;
+        visibility: visible;
+    }
+    .nav-right{
+        display: none;
+    }
+    .menubar:hover +.nav-right{
+        display: flex;
+        background-color: white;
+        flex-flow: column wrap;
+        position: absolute;
+        outline: 1px solid gray;
+        top: 100px;
+        right: 0;
+        width: 200px;
+    }
+    .root-card{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    .foot-bar{
+        padding: 80px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 10px;
+    }
+}
